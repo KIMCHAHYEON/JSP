@@ -49,4 +49,14 @@
     <servlet-name>Text</servlet-name>
     <url-pattern>/Text</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Detail</display-name>
+    <servlet-name>Detail</servlet-name>
+    <servlet-class>webtest.Detail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Detail</servlet-name>
+    <url-pattern>/Detail</url-pattern>
+  </servlet-mapping>
 </web-app>

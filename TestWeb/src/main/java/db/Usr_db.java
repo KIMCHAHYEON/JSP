@@ -141,6 +141,25 @@ public class Usr_db {
 		
 		
 	}
+	public void detail(BoardDTO dto) {
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			cn = DriverManager.getConnection(urs,id,pwd);
+			String sql = "SELECT * FROM Board WHERE b_id = ?";
+			ps = cn.prepareStatement(sql);
+			ps.setString(1, dto.getB_id());
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				
+				dto.setB_title(rs.getString("b_title"));
+				dto.setB_text(rs.getString("b_text"));
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
 		
 }
 

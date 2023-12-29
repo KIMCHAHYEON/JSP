@@ -22,7 +22,8 @@
 	%>
 	
 	<div><%=b.getB_title() %></div>
-	<div><%=b.getB_id() %></div>		
+	<div><%=b.getB_id() %></div>
+	<a href="/TestWeb/Detail?b_id=<%=b.getB_id()%>">상세페이지이동</a>		
 	<% 		
 		}
 	%>

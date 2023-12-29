@@ -49,6 +49,7 @@ public class Text extends HttpServlet {
 		db.boardInsert(bt);
 		
 		response.sendRedirect("/TestWeb/BoardMain");
+		request.getParameter(b_text);
 	}
 
 }
